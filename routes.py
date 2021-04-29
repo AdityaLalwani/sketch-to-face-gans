@@ -11,13 +11,10 @@ app = Flask(__name__)
 def home():
     return render_template('index.html',title='Home')
 
-@app.route('/about')
-def about():
-    return render_template('about.html',title='About',name='')
 
 @app.route("/predict")
 def predict():
-    return render_template("predict.html",title="Predict")
+    return render_template("predict.html",title="Predict",results="")
 
 @app.route("/upload",methods=["GET","POST"])
 def upload():
@@ -35,7 +32,7 @@ def upload():
 def prediction(filename):
     #imported process.py
     x=predict_img(filename) #imported from process file
-    return render_template('output.html',results=x)
+    return render_template('predict.html',results=x,title="Predict")
 
 if __name__ == '__main__':
     app.run(debug = True)

@@ -1,6 +1,30 @@
 {% extends 'layout.html' %}
 {% block ourpage %}
-
-	<h1 class="display-1">Hello! Welcome to our page</h1>
+	<style>
+	img {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+	</style>
+	<h3 class="display-3 text-center">Sketch Face Recognition</h3>
+	<h5 class="display-5 text-center">via</h5>
+	<h3 class="display-3 text-center">Generative Adversarial Network</h3><br>
+	<h5 class="display-5">Introduction:</h5>
+	Face sketch-photo transformation has broad applications in forensics, law enforcement, and digital entertainment,
+	particular for face recognition systems that are designed for
+	photo-to-photo matching. While there are a number of methods
+	for face photo-to-sketch transformation, studies on sketch-to-photo transformation remain limited. The generated face photos are used, as a replacement
+	of face sketches, and particularly for face identification against
+	a gallery set of mugshot photos. Experimental results show that the proposed
+	approach is able to generate realistic photos from sketches,
+	and the generated photos are instrumental in improving the
+	sketch identification accuracy against a large gallery set.
+	<h4 class="display-4 text-center">Try: <a href="/predict">Predict from your sketch</a></h4>
+	
+	<h5 class="display-5">Some Examples:</h5>
+	<img src="../static/a.jpg">
+	<img src="../static/b.jpg">
+	<img src="../static/c.jpg">
 
 {% endblock %}
